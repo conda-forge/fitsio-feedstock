@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [win]
+  # skip: True  # [win]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
@@ -34,6 +34,8 @@ requirements:
 test:
   imports:
     - fitsio
+  commands:
+    - python -c "import fitsio; fitsio.test.test()"
 
 about:
   home: https://github.com/esheldon/fitsio
