@@ -1,6 +1,6 @@
 {% set name = "fitsio" %}
-{% set version = "1.1.0" %}
-{% set sha256 = "b1a8846d11c3919ea75cca611de9f76bfbdf745c4439e89e983d8a6bcfb92183" %}
+{% set version = "1.1.1" %}
+{% set sha256 = "42b88214f9d8ed34a7911c3b41a680ce1bdee4880c58e441f00010058e97c0aa" %}
 
 package:
   name: {{ name }}
@@ -13,8 +13,8 @@ source:
 
 build:
   number: 0
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  skip: true  # [win]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   build:
