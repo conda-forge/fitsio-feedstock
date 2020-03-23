@@ -39,7 +39,7 @@ test:
 
 about:
   home: https://github.com/esheldon/fitsio
-  license: GPL
+  license: GPL-2.0
   license_file: LICENSE.txt
   summary: A python library to read from and write to FITS files.
   description: |
