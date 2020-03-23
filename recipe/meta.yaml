@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 2
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
@@ -34,10 +34,12 @@ requirements:
 test:
   imports:
     - fitsio
+  commands:
+    - python -c "import fitsio; fitsio.test.test()"
 
 about:
   home: https://github.com/esheldon/fitsio
-  license: GPL
+  license: GPL-2.0-only
   license_file: LICENSE.txt
   summary: A python library to read from and write to FITS files.
   description: |
