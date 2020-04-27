@@ -11,7 +11,7 @@ channel_targets:
 docker_image:
 - condaforge/linux-anvil-comp7
 libcurl:
-- '7.64'
+- '7'
 numpy:
 - '1.18'
 pin_run_as_build:
