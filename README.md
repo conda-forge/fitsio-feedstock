@@ -3,7 +3,7 @@ About fitsio
 
 Home: https://github.com/esheldon/fitsio
 
-Package license: GPL
+Package license: GPL-2.0-only
 
 Feedstock license: BSD 3-Clause
 
