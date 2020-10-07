@@ -30,6 +30,7 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - bzip2
+    - setuptools  # the test modules now use pkg_resources
 
 test:
   imports:
