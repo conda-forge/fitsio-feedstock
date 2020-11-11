@@ -41,7 +41,9 @@ test:
 about:
   home: https://github.com/esheldon/fitsio
   license: GPL-2.0-only
-  license_file: LICENSE.txt
+  license_file: 
+    - LICENSE.txt
+    - LICENSE_cfitsio.txt
   summary: A python library to read from and write to FITS files.
   description: |
     This is a python extension written in c and python. Data are read into
