@@ -14,10 +14,13 @@ source:
 build:
   number: 2
   skip: true  # [win]
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
+    - libtool  # [unix]
     - {{ compiler('c') }}
   host:
     - python
