@@ -1,6 +1,6 @@
 {% set name = "fitsio" %}
-{% set version = "1.1.5" %}
-{% set sha256 = "3460184af18d8ae10d2920a91c7755574f80feb6a5cb80689b34e56ea2a098d2" %}
+{% set version = "1.1.6" %}
+{% set sha256 = "3e7e5d4fc025d8b6328ae330e72628b92784d4c2bb2f1f0caeb75e730b2f91a5" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -22,13 +22,13 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - libtool  # [unix]
     - {{ compiler('c') }}
+    - make
   host:
     - python
     - pip
     - numpy
     - bzip2
     - libcurl
-
   run:
     - python
     - {{ pin_compatible('numpy') }}
