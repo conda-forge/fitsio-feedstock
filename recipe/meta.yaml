@@ -22,13 +22,13 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - libtool  # [unix]
     - {{ compiler('c') }}
+    - make
   host:
     - python
     - pip
     - numpy
     - bzip2
     - libcurl
-
   run:
     - python
     - {{ pin_compatible('numpy') }}
