@@ -1,6 +1,6 @@
 {% set name = "fitsio" %}
-{% set version = "1.1.7" %}
-{% set sha256 = "be870a568a21081789d390eb903777c4c1090d7cf246bfb1957526ed658c1a61" %}
+{% set version = "1.1.8" %}
+{% set sha256 = "61f569b2682a0cadce52c9653f0c9b81f951d000522cef645ce1cb49f78300f9" %}
 
 package:
   name: {{ name }}
