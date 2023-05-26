@@ -36,10 +36,12 @@ requirements:
     - setuptools  # the test modules now use pkg_resources
 
 test:
+  requires:
+    - pytest
   imports:
     - fitsio
   commands:
-    - python -c "import fitsio; fitsio.test.test()"
+    - pytest --pyargs fitsio.tests
 
 about:
   home: https://github.com/esheldon/fitsio
