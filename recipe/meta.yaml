@@ -16,7 +16,7 @@ build:
   skip: true  # [win]
   # zlib is bundled
   # we put it in host to make configure happy
-  ignore_run_exports:
+  ignore_run_exports_from:
     - zlib
 
 requirements:
