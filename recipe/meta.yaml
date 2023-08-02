@@ -29,6 +29,7 @@ requirements:
     - numpy
     - bzip2
     - libcurl
+    - zlib
   run:
     - python
     - {{ pin_compatible('numpy') }}
