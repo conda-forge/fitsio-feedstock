@@ -14,6 +14,10 @@ source:
 build:
   number: 0
   skip: true  # [win]
+  # zlib is bundled
+  # we put it in host to make configure happy
+  ignore_run_exports:
+    - zlib
 
 requirements:
   build:
@@ -50,6 +54,7 @@ about:
   license_file:
     - LICENSE.txt
     - LICENSE_cfitsio.txt
+    - LICENSE_zlib.txt
   summary: A python library to read from and write to FITS files.
   description: |
     This is a python extension written in c and python. Data are read into
