@@ -23,7 +23,6 @@ requirements:
     - libtool  # [unix]
     - {{ compiler('c') }}
     - make
-    - zlib  # fool autotools?
   host:
     - python
     - pip
