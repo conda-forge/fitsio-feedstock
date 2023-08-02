@@ -1,6 +1,6 @@
 {% set name = "fitsio" %}
-{% set version = "1.1.10" %}
-{% set sha256 = "4e821ecfd4edb763e238f01f8cd8310816c8a4f4a5a79475c179588ca4dc6237" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "f0ffbd7258bce60befa91148933096129b49ad9bff7750f8a7191fe95c78cb11" %}
 
 package:
   name: {{ name }}
@@ -14,6 +14,10 @@ source:
 build:
   number: 0
   skip: true  # [win]
+  # zlib is bundled
+  # we put it in host to make configure happy
+  ignore_run_exports_from:
+    - zlib
 
 requirements:
   build:
@@ -29,6 +33,7 @@ requirements:
     - numpy
     - bzip2
     - libcurl
+    - zlib
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -45,10 +50,11 @@ test:
 
 about:
   home: https://github.com/esheldon/fitsio
-  license: GPL-2.0-only
+  license: GPL-2.0-only AND Zlib
   license_file:
     - LICENSE.txt
     - LICENSE_cfitsio.txt
+    - LICENSE_zlib.txt
   summary: A python library to read from and write to FITS files.
   description: |
     This is a python extension written in c and python. Data are read into
