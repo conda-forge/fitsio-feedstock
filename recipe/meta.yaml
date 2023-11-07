@@ -1,6 +1,6 @@
 {% set name = "fitsio" %}
-{% set version = "1.2.0" %}
-{% set sha256 = "f0ffbd7258bce60befa91148933096129b49ad9bff7750f8a7191fe95c78cb11" %}
+{% set version = "1.2.1" %}
+{% set sha256 = "c64f60588f25fb2ba499854082bca73b0eda43b32ed6091f09dfcbcb72a911a6" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   # zlib is bundled
   # we put it in host to make configure happy
