@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   # zlib is bundled
   # we put it in host to make configure happy
@@ -26,6 +26,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - libtool  # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - make
   host:
     - python
@@ -36,7 +37,6 @@ requirements:
     - zlib
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - bzip2
     - setuptools  # the test modules now use pkg_resources
 
