@@ -1,15 +1,13 @@
 {% set name = "fitsio" %}
-{% set version = "1.2.1" %}
-{% set sha256 = "c64f60588f25fb2ba499854082bca73b0eda43b32ed6091f09dfcbcb72a911a6" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/esheldon/fitsio/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 439fe9453dcd4c9d129a3163d738edf9d2177725ccb459c6b68fed40ecc51d3f
 
 build:
   number: 0
