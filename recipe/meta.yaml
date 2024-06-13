@@ -1,5 +1,5 @@
 {% set name = "fitsio" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/esheldon/fitsio/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 439fe9453dcd4c9d129a3163d738edf9d2177725ccb459c6b68fed40ecc51d3f
+  sha256: 2b6d219674bb720dd25a793fd5be281b44a742d03a23d60803bac92e406a9afd
 
 build:
   number: 0
@@ -24,6 +24,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - libtool  # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - make
   host:
     - python
