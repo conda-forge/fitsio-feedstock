@@ -1,5 +1,5 @@
 {% set name = "fitsio" %}
-{% set version = "1.2.4" %}
+{% set version = "1.2.5" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/esheldon/fitsio/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 22bd17b87daee97b69a8c90e9bf5b10c43ba8f6c51c0d563c6d7fbe6dc6b622d
+  sha256: 037d6fc4573c89f5da76ddeb106a1f43c02d6f7fe466e483287c2e5691c5338a
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   # zlib is bundled
   # we put it in host to make configure happy
