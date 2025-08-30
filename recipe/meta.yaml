@@ -22,7 +22,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - numpy <2.3.0a0                         # [build_platform != target_platform]
+    - numpy <2.3.0a0                         # [build_platform != target_platform and py<314]
     - libtool  # [unix]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
@@ -32,7 +32,7 @@ requirements:
     - pip
     - setuptools
     - numpy
-    - numpy <2.3.0a0
+    - numpy <2.3.0a0  # [py<314]
     - bzip2
     - libcurl
     - zlib
