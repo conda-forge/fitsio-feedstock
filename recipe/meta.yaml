@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/esheldon/fitsio/archive/refs/tags/{{ version }}.tar.gz
   sha256: e6009326686d6e5ceb68208cfc9b79f579315baba760fd9cc9d703ae5e42de5e
+  patches:
+    - 0001-array-api.patch  # [version == "1.2.6"]
 
 build:
   number: 1
@@ -22,7 +24,6 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - numpy <2.3.0a0                         # [build_platform != target_platform and py<314]
     - libtool  # [unix]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
@@ -32,7 +33,6 @@ requirements:
     - pip
     - setuptools
     - numpy
-    - numpy <2.3.0a0  # [py<314]
     - bzip2
     - libcurl
     - zlib
