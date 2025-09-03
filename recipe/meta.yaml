@@ -8,10 +8,6 @@ package:
 source:
   url: https://github.com/esheldon/fitsio/archive/refs/tags/{{ version }}.tar.gz
   sha256: 356a425ce1c5c64e42685e1196f1d5fb43ec8fefb7f800232f756360e1a2a38a
-  {% if version == "1.2.6" %}
-  patches:
-    - 0001-array-api.patch
-  {% endif %}
 
 build:
   number: 0
