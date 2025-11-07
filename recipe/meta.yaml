@@ -10,7 +10,7 @@ source:
   sha256: 7539ac8e8093ea925ef23e81eab32252fcfc6a2b4edc9d18628fc1ac25f0c335
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   # zlib is bundled
   # we put it in host to make configure happy
