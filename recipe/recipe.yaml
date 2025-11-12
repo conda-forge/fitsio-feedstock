@@ -9,6 +9,8 @@ package:
 source:
   url: https://github.com/esheldon/fitsio/archive/refs/tags/${{ version }}.tar.gz
   sha256: 6ba04d3e24f6c18de99603d20aceb31f7f2f4514d7ce7a0e41fbb97e0e7b78c0
+  patches:
+    - no-programs-0000.patch
 
 build:
   number: 0
