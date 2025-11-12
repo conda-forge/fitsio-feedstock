@@ -1,5 +1,5 @@
 # configure has a weird choice the ignores LDFLAGS
-export CFLAGS="${CFLAGS} ${LDFLAGS}"
+export CFLAGS="${CFLAGS} ${LDFLAGS} -Wl,--whole-archive"
 
 # Get an updated config.sub and config.guess
 tarball=$(ls -1d ./cfitsio-*)
