@@ -1,5 +1,7 @@
 # configure has a weird choice the ignores LDFLAGS
-export CFLAGS="${CFLAGS} ${LDFLAGS} -Wl,--whole-archive"
+export CFLAGS="${CFLAGS} -Wl,-O2 -Wl,-rpath,$PREFIX/lib -Wl,-rpath-link,$PREFIX/lib -L$PREFIX/lib"
+
+# -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--allow-shlib-undefined 
 
 # Get an updated config.sub and config.guess
 tarball=$(ls -1d ./cfitsio-*)
