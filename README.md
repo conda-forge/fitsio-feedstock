@@ -9,15 +9,10 @@ Package license: GPL-2.0-only AND Zlib
 
 Summary: A python library to read from and write to FITS files.
 
-Development: https://github.com/esheldon/fitsio
-
-Documentation: https://github.com/esheldon/fitsio
-
 This is a python extension written in c and python. Data are read into
 numerical python arrays. A version of cfitsio is bundled with this package,
 there is no need to install your own, nor will this conflict with a
 version you have installed.
-
 
 Current build status
 ====================
