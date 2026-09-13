@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/esheldon/fitsio/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 3c786902958e3d130d49300f1ac61071e0e66fe1aba91cf19134369efde3c50c
+  sha256: 00194393a9e67df71a93d45dd291de364d0ee1a8a6e2e3d344df278afff802ae
 
 build:
   number: 1
