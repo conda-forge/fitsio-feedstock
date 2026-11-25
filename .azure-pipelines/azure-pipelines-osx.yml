@@ -149,7 +149,8 @@ jobs:
         tools_install_dir: ~/miniforge3
         vm_image: macOS-15-arm64
   timeoutInMinutes: 360
-  variables: {}
+  variables:
+    - group: anaconda-org
 
   steps:
   # TODO: Fast finish on azure pipelines?
